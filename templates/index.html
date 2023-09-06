@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<!-- Header image -->
+<div class="container-fluid text-center p-3" style="background-image: url('{{ url_for('static', filename='images/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg') }}'); background-size: cover; background-repeat: no-repeat; background-position: center bottom;">
+    <div class="text-light my-5">
+        <img src="{{ url_for('static', filename='images/pop_logo.png')}}" alt="Pop!" style="max-width: 200px;">
+        <h3> Discover, Groove, and Elevate with AI-powered music service. </h2>
+    </div>
+
+    <form action="/discover" method="POST">
+        <button type="submit" class="btn btn-dark btn-lg"> Discover </button>
+    </form>
+</div>
+<!-- Header image -->
+
+<!-- Trending Today-->
+<div class="container-fluid p-5 text-light">
+    <h1 class="py-3"> Trending Today </h1>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <a href="/song/artist_name/song_name">
+                <div class="card text-white bg-dark">
+                <img src="{{ url_for('static', filename='images/pop_bg.png')}}" class="card-img-top" alt="Song Name - Artist Name">
+                <div class="card-body">
+                    <h5 class="card-title">Song Name</h5>
+                    <h6 class="card-subtitle text-muted mb-2">Artist Name</h6>
+                </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="/song/artist_name/song_name">
+                <div class="card text-white bg-dark">
+                <img src="{{ url_for('static', filename='images/pop_bg.png')}}" class="card-img-top" alt="Song Name - Artist Name">
+                <div class="card-body">
+                    <h5 class="card-title">Song Name</h5>
+                    <h6 class="card-subtitle text-muted mb-2">Artist Name</h6>
+                </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="/song/artist_name/song_name">
+                <div class="card text-white bg-dark">
+                <img src="{{ url_for('static', filename='images/pop_bg.png')}}" class="card-img-top" alt="Song Name - Artist Name">
+                <div class="card-body">
+                    <h5 class="card-title">Song Name</h5>
+                    <h6 class="card-subtitle text-muted mb-2">Artist Name</h6>
+                </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="/song/artist_name/song_name">
+                <div class="card text-white bg-dark">
+                <img src="{{ url_for('static', filename='images/pop_bg.png')}}" class="card-img-top" alt="Song Name - Artist Name">
+                <div class="card-body">
+                    <h5 class="card-title">Song Name</h5>
+                    <h6 class="card-subtitle text-muted mb-2">Artist Name</h6>
+                </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="/song/artist_name/song_name">
+                <div class="card text-white bg-dark">
+                <img src="{{ url_for('static', filename='images/pop_bg.png')}}" class="card-img-top" alt="Song Name - Artist Name">
+                <div class="card-body">
+                    <h5 class="card-title">Song Name</h5>
+                    <h6 class="card-subtitle text-muted mb-2">Artist Name</h6>
+                </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Trending Today-->
+
+<!-- For You -->
+<!-- Featured Artists -->
+
+{% endblock %}
