@@ -1,4 +1,5 @@
 import pandas as pd
+import math
 import random
 
 df = pd.read_csv("data/top_10000_1960-now.csv")
@@ -11,7 +12,13 @@ def discover():
 
 def get_stats(artist_name, song_name):
     song = df[(df['Track Name'] == song_name) & (df['Artist Name(s)'] == artist_name)]
-    image_url = song['Album Image URL'].iloc[0]
-    return image_url
+
+    image_url = song["Album Image URL"].iloc[0]
+    
+    song_url = song["Track Preview URL"].iloc[0]
+    if type(song_url) != str:
+        song_url = False
+
+    return image_url, song_url
 
 

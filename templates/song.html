@@ -2,11 +2,35 @@
 
 {% block body %}
 
-<div class="text-light">
-    <h1>{{song_name}}</h1>
-    <h2>{{artist_name}}</h2>
-    <img src="{{image_url}}" alt="{{song_name}}">
+<div class="p-3">
+    <div class="card mb-3 text-white bg-dark p-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{image_url}}" class="img-fluid rounded-start" alt="{{song_name}}">
+        </div>
+        <div class="col-md-8 px-4">
+            <div class="card-body">
+                <h1 class="card-title">{{song_name}}</h1>
+                <h2 class="card-subtitle text-muted">{{artist_name}}</h2>
+                <div class="audio-player pt-5">
+                {% if song_url %}
+                    <audio controls="" autoplay="" name="media">
+                    <source src="{{song_url}}" type="audio/mpeg">
+                    </audio>
+                {% else %}
+                <h6 class="card-subtitle text-muted">No preview available</h6>
+                {% endif %}
+            </div>
+            </div>            
+        </div>
+    </div>
+    </div>
+
+    <form action="/discover" method="POST">
+        <button type="submit" class="btn btn-dark btn-lg"> Discover </button>
+    </form>
 </div>
+
 
 
 {% endblock %}

@@ -14,8 +14,12 @@ def home():
 @app.route('/song/<artist_name>/<song_name>')
 def song(artist_name, song_name):
     # Get other stats here
-    image_url = library.get_stats(artist_name, song_name)
-    return render_template("song.html", artist_name=artist_name, song_name=song_name, image_url=image_url)
+    image_url, song_url = library.get_stats(artist_name, song_name)
+    return render_template("song.html",
+                           artist_name=artist_name,
+                           song_name=song_name,
+                           image_url=image_url,
+                           song_url=song_url)
 
 
 @app.route('/discover', methods=['POST'])
@@ -29,24 +33,9 @@ if __name__ == "__main__":
 
 
 """
-IDEA DUMP
-# Song recommendor AI
-# Random button play!
-# Make song pic placeholder
-
-
-https://chat.openai.com/share/7cc49bda-112e-4e85-96ec-d5ff35b9af77
-ai gen personal playlist
-shared playlist
-lyrics and karaoke
-music discovery, random track but still personalized
-interactive podcasts
-accessability features
-music education
-virtual concerts, live streaming, radio station
-user gen content, forums
-music visualization
-mood and activity recognition
+TODO:
+fix page not founds
+for you
 
 
 This can be a webdev portfolio
