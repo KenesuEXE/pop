@@ -6,3 +6,10 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+

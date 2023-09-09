@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container-fluid text-center p-3" style="background-image: url('{{ url_for('static', filename='images/marcela-laskoski-YrtFlrLo2DQ-unsplash.png') }}'); background-size: cover; background-repeat: no-repeat; background-position: center bottom;">
+    <div class="text-light my-5">
+        <h3> 404 Error. Oops, sorry! </h2>
+    </div>
+
+    <form action="/discover" method="POST">
+        <button type="submit" class="btn btn-dark btn-lg"> Discover </button>
+    </form>
+</div>
+
+{% endblock %}

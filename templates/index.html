@@ -3,10 +3,11 @@
 {% block body %}
 
 <!-- Header image -->
-<div class="container-fluid text-center p-3" style="background-image: url('{{ url_for('static', filename='images/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg') }}'); background-size: cover; background-repeat: no-repeat; background-position: center bottom;">
+<div class="container-fluid text-center p-3" style="background-image: url('{{ url_for('static', filename='images/marcela-laskoski-YrtFlrLo2DQ-unsplash.png') }}'); background-size: cover; background-repeat: no-repeat; background-position: center bottom;">
     <div class="text-light my-5">
         <img src="{{ url_for('static', filename='images/pop_logo.png')}}" alt="Pop!" style="max-width: 200px;">
-        <h3> Discover, Groove, and Elevate with AI-powered music service. </h2>
+        <h2> Discover, Groove, and Connect </h2>
+        <h4> with your AI-powered music service. </h4>
     </div>
 
     <form action="/discover" method="POST">

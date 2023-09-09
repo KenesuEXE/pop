@@ -27,15 +27,10 @@ def discover():
     return redirect(url_for('song', artist_name=artist_name, song_name=song_name))
 
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template("error.html")
+
+
 if __name__ == "__main__":
     app.run(debug = True)
-
-
-"""
-TODO:
-fix page not founds
-for you
-
-
-This can be a webdev portfolio
-"""

@@ -2,6 +2,12 @@
 
 {% block body %}
 
+<div class="container-fluid text-center p-3" style="background-image: url('{{ url_for('static', filename='images/marcela-laskoski-YrtFlrLo2DQ-unsplash.png') }}'); background-size: cover; background-repeat: no-repeat; background-position: center bottom;">
+        <form action="/discover" method="POST">
+            <button type="submit" class="btn btn-dark btn-lg"> Discover </button>
+        </form>
+</div>
+
 <div class="p-3">
     <div class="card mb-3 text-white bg-dark p-3">
     <div class="row g-0">
@@ -9,7 +15,7 @@
             <img src="{{image_url}}" class="img-fluid rounded-start" alt="{{song_name}}">
         </div>
         <div class="col-md-8 px-4">
-            <div class="card-body">
+            <div class="card-body px-0 py-3">
                 <div>
                     <h1 class="card-title">{{song_name}}</h1>
                     <h2 class="card-subtitle text-muted">{{artist_name}}</h2>
@@ -37,10 +43,6 @@
         </div>
     </div>
     </div>
-
-    <form action="/discover" method="POST">
-        <button type="submit" class="btn btn-dark btn-lg"> Discover </button>
-    </form>
 </div>
 
 
