@@ -13,7 +13,6 @@ def home():
 
 @app.route('/song/<artist_name>/<song_name>')
 def song(artist_name, song_name):
-    # Get other stats here
     image_url, song_url = library.get_stats(artist_name, song_name)
     return render_template("song.html",
                            artist_name=artist_name,

@@ -10,9 +10,11 @@
         </div>
         <div class="col-md-8 px-4">
             <div class="card-body">
-                <h1 class="card-title">{{song_name}}</h1>
-                <h2 class="card-subtitle text-muted">{{artist_name}}</h2>
-                <div class="audio-player pt-5">
+                <div>
+                    <h1 class="card-title">{{song_name}}</h1>
+                    <h2 class="card-subtitle text-muted">{{artist_name}}</h2>
+                </div>
+                <div class="audio-player pt-5 pb-1">
                 {% if song_url %}
                     <audio controls="" autoplay="" name="media">
                     <source src="{{song_url}}" type="audio/mpeg">
@@ -20,7 +22,17 @@
                 {% else %}
                 <h6 class="card-subtitle text-muted">No preview available</h6>
                 {% endif %}
-            </div>
+                </div>
+                <div>
+                    <div>
+                        <i class="bi bi-hand-thumbs-up-fill pr-3"></i>
+                        <h6 class="d-inline">136K</h6>
+                    </div>
+                    <div>
+                        <i class="bi bi-hand-thumbs-down"></i>
+                        <h6 class="d-inline">5K</h6>
+                    </div>
+                </div>
             </div>            
         </div>
     </div>
