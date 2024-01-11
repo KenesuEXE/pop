@@ -1,8 +1,10 @@
 import pandas as pd
 import math
 import random
+from pathlib import Path
 
-df = pd.read_csv("data/top_10000_1960-now.csv")
+THIS_FOLDER = Path(__file__).parent.resolve()
+df = pd.read_csv(THIS_FOLDER / "data/top_10000_1960-now.csv")
 
 def discover():
     rng = random.randint(0, len(df))
